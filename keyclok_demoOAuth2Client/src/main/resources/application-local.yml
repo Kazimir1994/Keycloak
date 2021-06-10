@@ -1,0 +1,33 @@
+server:
+  port: ${SERVER_PORT:8080}
+#spring:
+#  application.name: ${APPLICATION_NAME:spring-security-keycloak-oauth}
+#  security:
+#    oauth2:
+#      client:
+#        provider:
+#          keycloak:
+#            issuer-uri: http://localhost:8484/auth/realms/REALM_TEST
+#        registration:
+#          keycloak:
+#            client-id: CLIENT_TEST
+#            client-secret: 178e00f6-2e0a-4712-9565-5cf6f5bee5ca
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: CLIENT_TEST
+            client-secret: 9cbd1f8b-f3b4-458d-882c-d2dacfa49a6c
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - roles
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8484/auth/realms/REALM_TEST
+#            authorization-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/auth
+#            token-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/token
+#            jwk-set-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/certs
+#            user-info-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/userinfo

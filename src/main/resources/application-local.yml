@@ -1,0 +1,11 @@
+server:
+  port: 8080
+keycloak:
+  realm: REALM_TEST
+  auth-server-url: http://localhost:8484/auth
+  ssl-required: external
+  resource: CLIENT_TEST
+  credentials:
+    secret: bbf2c72e-ac9a-4837-bc41-052790b915ac
+  use-resource-role-mappings: true
+  bearer-only: false
