@@ -9,11 +9,3 @@ spring:
           introspection-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/token/introspect
           client-id: CLIENT_TEST
           client-secret: 9cbd1f8b-f3b4-458d-882c-d2dacfa49a6c
-
-#        jwt:
-#          jwk-set-uri: ${KEYCLOAK_REALM_CERT_URL:http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/certs}
-#        jwt:
-#          public-key-location: classpath:my-key.pub
-
-#          token-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/token
-#          user-info-uri: http://localhost:8484/auth/realms/REALM_TEST/protocol/openid-connect/userinfo
